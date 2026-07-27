@@ -36,7 +36,7 @@
               <label class="govuk-label govuk-date-input__label" for="spouse-dob-day">
                 Day
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="spouse-dob-day" name="spouse-dob-day" type="text" inputmode="numeric">
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="spouse-dob-day" name="spouse-dob-day" type="text" inputmode="numeric" value="{{data['spouse-dob-day']}}">
             </div>
           </div>
           <div class="govuk-date-input__item">
@@ -44,7 +44,7 @@
               <label class="govuk-label govuk-date-input__label" for="spouse-dob-month">
                 Month
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="spouse-dob-month" name="spouse-dob-month" type="text" inputmode="numeric">
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="spouse-dob-month" name="spouse-dob-month" type="text" inputmode="numeric" value="{{data['spouse-dob-month']}}">
             </div>
           </div>
           <div class="govuk-date-input__item">
@@ -52,7 +52,7 @@
               <label class="govuk-label govuk-date-input__label" for="spouse-dob-year">
                 Year
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="spouse-dob-year" name="spouse-dob-year" type="text" inputmode="numeric">
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="spouse-dob-year" name="spouse-dob-year" type="text" inputmode="numeric" value="{{data['spouse-dob-year']}}">
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
       <div id="spouse-ni-number-hint" class="govuk-hint">
         It’s on your National Insurance card, benefit letter, payslip or P60&mdash;for example, QQ 12 34 56 C'.
       </div>
-      <input class="govuk-input govuk-input--width-10" id="spouse-ni-number" name="spouse-ni-number" type="text" spellcheck="false" aria-describedby="spouse-ni-number" autocomplete="none">
+      <input class="govuk-input govuk-input--width-10" id="spouse-ni-number" name="spouse-ni-number" type="text" spellcheck="false" aria-describedby="spouse-ni-number" autocomplete="none" value="{{data['spouse-ni-number']}}">
     </div>
 
     <!---------Button-------->

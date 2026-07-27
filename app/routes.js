@@ -35,14 +35,62 @@ router.post('/:version/before-you-start', function (req, res) {
   }
 });
 
+router.get('/:version/about-you', function (req, res) {
+
+  const version = req.params.version;
+
+  const edit = req.query.edit;
+  console.log("Edit: " + edit)
+
+  req.session.data['edit'] = edit;
+
+  return res.render(`/${version}/about-you`);
+});
+
+router.get('/:version/about-the-spouse', function (req, res) {
+
+  const version = req.params.version;
+
+  const edit = req.query.edit;
+  console.log("Edit: " + edit)
+
+  req.session.data['edit'] = edit;
+
+  return res.render(`/${version}/about-the-spouse`);
+})
+
 // ---------- Relationship to deceased ---------- 
 router.post('/:version/relationship-to-deceased', function (req, res) {
   const relationship = req.session.data['informer-relationship'];
+  const edit = req.session.data['edit']
+
+  console.log("Edit: " + edit)
+
+  if (edit === 'true') {
+    req.session.data['edit'] = false;
+    return res.redirect('check-your-answers-1');
+  }
+
   if (["Husband", "Wife", "Spouse", "Civil Partner", "Partner"].includes(relationship)){
     return res.redirect('about-the-spouse')
   }
     return res.redirect('check-your-answers-1');
 });
+
+// ---------- Check your answers 1 ---------- 
+router.post('/:version/check-your-answers-1', function (req, res) {
+  const edit = req.session.data['edit']
+
+  console.log("Edit: " + edit)
+
+  if (edit === 'true') {
+    req.session.data['edit'] = false;
+  }
+
+  return res.redirect('check-your-answers-1');
+
+});
+
 
 // ---------- Next of kin ---------- 
 router.post('/current/about-the-next-of-kin', function (req, res) {
@@ -496,18 +544,18 @@ if (req.session.data['journey'] === 'full-journey') {
 }
 
   if(attempts < 2 && regNum == "AB123C456DE7"){
-    return res.redirect(`/${version}${enrichmentPath}/enter-death-registration-details`)
+    return res.redirect(`/${version}/enter-death-registration-details`)
   } 
   
   if (attempts == 3 && regNum == "AB123C456DE7"){
     console.log("Locked out")
-    return res.redirect(`/${version}${enrichmentPath}/we-could-not-match-the-death-registration-details`)
+    return res.redirect(`/${version}/we-could-not-match-the-death-registration-details`)
   }
 
   if (regNum != "AB123C456DE7"){
     return res.redirect(`/${version}/registration-details-found`)
   } else {
-    return res.redirect(`/${version}${enrichmentPath}/enter-death-registration-details`)
+    return res.redirect(`/${version}/enter-death-registration-details`)
   }
 });
 // End Enter death registrations details page - security lock out
