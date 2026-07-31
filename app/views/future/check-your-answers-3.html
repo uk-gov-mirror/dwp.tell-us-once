@@ -7,7 +7,7 @@
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">{{pageName}}</h1>
 
-        <!---------About you-------->
+        <!---------Notify organisations about the death-------->
         <h2 class="govuk-heading-m">Notify organisations and services about the death</h2>
 
         <dl class="govuk-summary-list">
@@ -339,6 +339,7 @@
               <a class="govuk-link" href="who-do-you-want-to-notify">Change<span class="govuk-visually-hidden"> Armed Forces Compensation Scheme</span></a>
             </dd>
           </div>
+          {% if data['has-ni-number'] == 'yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               {% if data['ni-number'] != "QQ123456C" and data['ni-number'] != "QQ112233C" %}
@@ -366,16 +367,14 @@
               <a class="govuk-link" href="notify-a-public-sector-pension">Change<span class="govuk-visually-hidden"> Public sector pension providers you want to notify about the death</span></a>
             </dd>
           </div>
+          {% endif %}
         </dl>
 
         <p class="govuk-body govuk-!-padding-top-2 govuk-!-padding-bottom-4">You have completed section 3 of 
           {% if data['informer-next-of-kin'] == 'no'
-            or data['informer-deal-estate'] == 'no'
-            or (data['informer-relationship'] != 'Husband'
-            and data['informer-relationship'] != 'Wife'
-            and data['informer-relationship'] != 'Spouse'
-            and data['informer-relationship'] != 'Civil Partner'
-            and data['informer-relationship'] != 'Partner'
+            and data['informer-deal-estate'] == 'no'
+            or (data['deceased-marital-status'] == 'Married'
+            and data['deceased-marital-status'] == 'Civil Partnership'
             )%}
             4
             {% else %}

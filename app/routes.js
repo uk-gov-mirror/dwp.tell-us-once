@@ -35,6 +35,7 @@ router.post('/:version/before-you-start', function (req, res) {
   }
 });
 
+// ---------- Get: About you ---------- 
 router.get('/:version/about-you', function (req, res) {
 
   const version = req.params.version;
@@ -47,6 +48,7 @@ router.get('/:version/about-you', function (req, res) {
   return res.render(`/${version}/about-you`);
 });
 
+// ---------- Get: About the spouse ---------- 
 router.get('/:version/about-the-spouse', function (req, res) {
 
   const version = req.params.version;
@@ -59,7 +61,7 @@ router.get('/:version/about-the-spouse', function (req, res) {
   return res.render(`/${version}/about-the-spouse`);
 })
 
-// ---------- Relationship to deceased ---------- 
+// ---------- Post: Relationship to deceased ---------- 
 router.post('/:version/relationship-to-deceased', function (req, res) {
   const relationship = req.session.data['informer-relationship'];
   const edit = req.session.data['edit']
@@ -77,7 +79,7 @@ router.post('/:version/relationship-to-deceased', function (req, res) {
     return res.redirect('check-your-answers-1');
 });
 
-// ---------- Check your answers 1 ---------- 
+// ---------- Post: About the spouse ---------- 
 router.post('/:version/check-your-answers-1', function (req, res) {
   const edit = req.session.data['edit']
 

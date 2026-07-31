@@ -138,10 +138,10 @@
               <a class="govuk-link" href="about-you?edit=true">Change<span class="govuk-visually-hidden"> are you the next of kin</span></a>
             </dd>
           </div>
-          {% if data['informer-next-of-kin'] == 'yes' %}
+          {% if data['informer-relationship'] == "Husband" or data['informer-relationship'] == "Wife" or data['informer-relationship'] == "Spouse" or data['informer-relationship'] == "Civil Partnership" %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Date of birth
+              Your date of birth
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['spouse-dob-day']}} {{data['spouse-dob-month'] | monthName}} {{data['spouse-dob-year']}}
@@ -152,7 +152,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              National Insurance number
+              Your National Insurance number
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['spouse-ni-number'] | upper}}
@@ -163,20 +163,17 @@
           </div>
           {% endif %}
         </dl>
-
+        
         <p class="govuk-body govuk-!-padding-top-2 govuk-!-padding-bottom-4">You have completed section 1 of
           {% if data['informer-next-of-kin'] == 'no'
-          or data['informer-deal-estate'] == 'no'
-          or (data['informer-relationship'] != 'Husband'
-          and data['informer-relationship'] != 'Wife'
-          and data['informer-relationship'] != 'Spouse'
-          and data['informer-relationship'] != 'Civil Partner'
-          and data['informer-relationship'] != 'Partner'
-          )%}
-          4
-          {% else %}
-          3
-          {% endif %}.
+            and data['informer-deal-estate'] == 'no'
+            or (data['deceased-marital-status'] == 'Married'
+            and data['deceased-marital-status'] == 'Civil Partnership'
+            )%}
+            4
+            {% else %}
+            3
+            {% endif %}.
         </p>
 
         <form class="form" action="what-well-ask-about-the-person-who-died" method="post" novalidate>

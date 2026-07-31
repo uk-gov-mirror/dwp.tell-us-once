@@ -9,7 +9,7 @@
     <form class="form" action="check-your-answers-1" method="post">
     <h1 class="govuk-heading-l">{{pageName}}</h1>
 
-    <p class="govuk-body">As you were {% if data['informer-relationship'] == "Husband" or data['informer-relationship'] == "Wife" or data['informer-relationship'] == "Spouse" %}married to{% else %}in a civil partnership with{% endif %} the person you died, you must also enter either your:</p>
+    <p class="govuk-body">As you were {% if data['informer-relationship'] == "Husband" or data['informer-relationship'] == "Wife" or data['informer-relationship'] == "Spouse" %}married to{% elif data['informer-relationship'] == "Civil Partnership" %}in a civil partnership with{% endif %} the person who died, you must also enter either your:</p>
 
     <ul class="govuk-list govuk-list--bullet">
       <li>date of birth</li>
@@ -25,7 +25,7 @@
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="spouse-dob-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Date of birth
+           Your date of birth
         </legend>
         <div id="spouse-dob-hint" class="govuk-hint">
           For example, 19 4 1985
@@ -63,7 +63,7 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label govuk-label--m" for="spouse-ni-number">
-        National Insurance number
+        Your National Insurance number
       </label>
       <div id="spouse-ni-number-hint" class="govuk-hint">
         It’s on your National Insurance card, benefit letter, payslip or P60&mdash;for example, QQ 12 34 56 C'.

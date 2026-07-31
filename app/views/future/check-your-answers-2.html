@@ -154,12 +154,9 @@
 
         <p class="govuk-body govuk-!-padding-top-2 govuk-!-padding-bottom-4">You have completed section 2 of 
           {% if data['informer-next-of-kin'] == 'no'
-            or data['informer-deal-estate'] == 'no'
-            or (data['informer-relationship'] != 'Husband'
-            and data['informer-relationship'] != 'Wife'
-            and data['informer-relationship'] != 'Spouse'
-            and data['informer-relationship'] != 'Civil Partner'
-            and data['informer-relationship'] != 'Partner'
+            and data['informer-deal-estate'] == 'no'
+            or (data['deceased-marital-status'] == 'Married'
+            and data['deceased-marital-status'] == 'Civil Partnership'
             )%}
             4
             {% else %}
