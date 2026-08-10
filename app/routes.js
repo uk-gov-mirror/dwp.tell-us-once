@@ -115,7 +115,7 @@ router.post('/:version/what-well-ask-about-the-next-of-kin', function (req, res)
   if (["Husband", "Wife", "Spouse", "Civil Partner", "Partner"].includes(relationship) || executor == "no"){
     return res.redirect('what-well-ask-about-the-next-of-kin')
   }
-    return res.redirect('before-we-send');
+    return res.redirect('email-confirmation');
 });
 
 
