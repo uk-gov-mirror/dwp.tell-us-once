@@ -1,0 +1,48 @@
+{% extends "layouts/prototype.html" %}
+{% set active = "you-must-have-the-information-you-need-to-use-tell-us-once" %}
+
+{% block pageTitle %}
+Page index - You must have the information you need to use Tell Us Once
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/page-index-side-nav.njk" %}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="index.html">Page index</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Enrichment</span>
+      You must have the information you need to use Tell Us Once
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/before-you-start" aria-hidden="true"
+            tabindex="-1"></iframe>
+        </div>
+        <h3 class="govuk-heading-s"><a href="/future/before-you-start">Before you start</a></h3>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

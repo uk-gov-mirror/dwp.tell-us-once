@@ -169,11 +169,8 @@
             and data['informer-deal-estate'] == 'no'
             or (data['deceased-marital-status'] == 'Married'
             and data['deceased-marital-status'] == 'Civil Partnership'
-            )%}
-            4
-            {% else %}
-            3
-            {% endif %}.
+            )%}4{% else %}
+            3{% endif %}.
         </p>
 
         <form class="form" action="what-well-ask-about-the-person-who-died" method="post" novalidate>

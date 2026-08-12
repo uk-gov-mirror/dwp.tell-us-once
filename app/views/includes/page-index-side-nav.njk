@@ -5,6 +5,14 @@
     Enrichment
   </li>
 
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'you-must-have-the-information-you-need-to-use-tell-us-once' }}">
+    <a href="/page-index/you-must-have-the-information-you-need-to-use-tell-us-once"
+       class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'you-must-have-the-information-you-need-to-use-tell-us-once' }}"
+       {% if active == 'you-must-have-the-information-you-need-to-use-tell-us-once' %}aria-current="true"{% endif %}>
+      You must have the information you need to use Tell Us Once
+    </a>
+  </li>
+
   <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'before-we-send' }}">
     <a href="/page-index/before-we-send-the-information"
        class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'before-we-send' }}"
@@ -13,7 +21,7 @@
     </a>
   </li>
 
-  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'bbefore-you-start' }}">
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'before-you-start' }}">
     <a href="/page-index/before-you-start"
        class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'before-you-start' }}"
        {% if active == 'before-you-start' %}aria-current="true"{% endif %}>

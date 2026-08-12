@@ -1,5 +1,5 @@
 {% extends "layouts/main.html" %}
-{% set pageName="You must have the information you need to use Tell Us Once" %}
+{% set pageName="You must have the information needed to use Tell Us Once" %}
 {% set backLink = true %}
 {% set version = 0_1 %}
 {% set journey = 'full-journey' %}
@@ -12,7 +12,7 @@
     <h1 class="govuk-heading-l">{{pageName}}</h1>
     <p class="govuk-body">To use Tell Us Once, you need the reference number that the registrar gave you, and information about the person who died. Check <a href="step-by-step">what information you need to use Tell Us Once</a>.</p>
     <p class="govuk-body">You will not be able to save your answers and come back later.</p>
-    <p class="govuk-body">There is no time limit to complete Tell Us Once. But, if you're inactive for more than 20 minutes, we will delete your answers. We do this to protect your information.</p>
+    <p class="govuk-body">To protect your information, if you're inactive for more than 20 minutes on a page, we will delete your answers. But, there is no time limit to complete Tell Us Once.</p>
 
     <!--------- Routing -------->
     <form action="check-if-you-need-consent" method="post">

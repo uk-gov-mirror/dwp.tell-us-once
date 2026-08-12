@@ -214,25 +214,25 @@ router.post('/:version/is-there-a-next-of-kin', function (req, res) {
   const informerDealEstate = req.session.data['informer-deal-estate'];
 
   const isSpouse =
-    ["Husband", "Wife", "Spouse", "Civil Partner", "Partner"]
+    ["Husband", "Wife", "Spouse", "Civil Partner"]
       .includes(relationship);
 
-  // 4. Informer is not next of kin
+  // Informer is not next of kin
   if (nok === "no") {
     return res.redirect('about-the-next-of-kin');
   }
 
-  // 1. Informer is next of kin but not spouse
+  // Informer is next of kin but not spouse
   if (!isSpouse) {
     return res.redirect('about-the-spouse-not-spouse');
   }
 
-  // 3. Informer is spouse and not dealing with estate
+  // Informer is spouse and not dealing with estate
   if (informerDealEstate === "no") {
     return res.redirect('about-the-person-dealing-with-the-estate');
   }
 
-  // 2. Informer is spouse and dealing with estate
+  // Informer is spouse and dealing with estate
   if (informerDealEstate === "yes") {
     return res.redirect('email-confirmation');
   }
