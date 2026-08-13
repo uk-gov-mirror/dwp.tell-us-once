@@ -1,19 +1,65 @@
 <ul class="dwp-side-navigation__list">
 
-  {# Section: Enrichment #}
+  {# Section: Section #}
   <li class="dwp-side-navigation__section">
-    Enrichment
+    Section in journey
   </li>
 
-  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'you-must-have-the-information-you-need-to-use-tell-us-once' }}">
-    <a href="/page-index/you-must-have-the-information-you-need-to-use-tell-us-once"
-       class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'you-must-have-the-information-you-need-to-use-tell-us-once' }}"
-       {% if active == 'you-must-have-the-information-you-need-to-use-tell-us-once' %}aria-current="true"{% endif %}>
-      You must have the information you need to use Tell Us Once
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'before-starting-the-journey' }}">
+    <a href="/page-index/enrichment/before-starting-the-journey" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'before-starting-the-journey' }}" {% if active=='before-starting-the-journey' %}aria-current="true" {% endif %}>
+      Before starting the journey
     </a>
   </li>
 
-  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'before-we-send' }}">
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'death-registration-details' }}">
+    <a href="/page-index/enrichment/death-registration-details" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'death-registration-details' }}" {% if active=='death-registration-details' %}aria-current="true" {% endif %}>
+      Death registration details
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'about-you' }}">
+    <a href="/page-index/enrichment/about-you" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'about-you' }}" {% if active=='about-you' %}aria-current="true" {% endif %}>
+      About you
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'about-the-person-who-died' }}">
+    <a href="/page-index/enrichment/about-the-person-who-died" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'about-the-person-who-died' }}" {% if active=='about-the-person-who-died' %}aria-current="true" {% endif %}>
+      About the person who died
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'notify-organisations-about-the-death' }}">
+    <a href="/page-index/enrichment/notify-organisations-about-the-death" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'notify-organisations-about-the-death' }}" {% if active=='notify-organisations-about-the-death' %}aria-current="true" {% endif %}>
+      Notify organisations about the death
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'about-other-people' }}">
+    <a href="/page-index/enrichment/about-other-people" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'about-other-people' }}" {% if active=='about-other-people' %}aria-current="true" {% endif %}>
+      About other people
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'email-confirmation' }}">
+    <a href="/page-index/enrichment/email-confirmation" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'email-confirmation' }}" {% if active=='email-confirmation' %}aria-current="true" {% endif %}>
+      Email confirmation
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'before-we-send-the-information' }}">
+    <a href="/page-index/enrichment/before-we-send-the-information" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'before-we-send-the-information' }}" {% if active=='before-we-send-the-information' %}aria-current="true" {% endif %}>
+      Before we send the information
+    </a>
+  </li>
+
+  <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'confirmation' }}">
+    <a href="/page-index/enrichment/confirmation" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'confirmation' }}" {% if active=='before-we-send-the-information' %}aria-current="true" {% endif %}>
+      Confirmation
+    </a>
+  </li>
+
+  <!-- <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'before-we-send' }}">
     <a href="/page-index/before-we-send-the-information"
        class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'before-we-send' }}"
        {% if active == 'before-we-send' %}aria-current="true"{% endif %}>
@@ -67,7 +113,7 @@
        {% if active == 'ni-number' %}aria-current="true"{% endif %}>
       Their National Insurance number
     </a>
-  </li>
+  </li> -->
 
   <!-- {# Section: Enrichment (agent) #}
   <li class="dwp-side-navigation__section">
@@ -82,8 +128,7 @@
     </a>
   </li> -->
 
-
-
+  <!-- 
   {# Section: Capture #}
   <li class="dwp-side-navigation__section">
     Capture
@@ -95,7 +140,7 @@
        {% if active == 'notification-banner' %}aria-current="true"{% endif %}>
       Notification banner
     </a>
-  </li>
+  </li> -->
 
 
   {# Section: Global #}
@@ -104,17 +149,13 @@
   </li>
 
   <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'service-timeout' }}">
-    <a href="/page-index/service-timeout"
-       class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'service-timeout' }}"
-       {% if active == 'service-timeout' %}aria-current="true"{% endif %}>
+    <a href="/page-index/enrichment/service-timeout" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'service-timeout' }}" {% if active=='service-timeout' %}aria-current="true" {% endif %}>
       Service timeout
     </a>
   </li>
 
   <li class="dwp-side-navigation__item {{ 'dwp-side-navigation__item--selected' if active == 'cookie-banner' }}">
-    <a href="/page-index/cookie-banner"
-       class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'cookie-banner' }}"
-       {% if active == 'cookie-banner' %}aria-current="true"{% endif %}>
+    <a href="/page-index/enrichment/cookie-banner" class="dwp-side-navigation__link {{ 'dwp-side-navigation__link--selected' if active == 'cookie-banner' }}" {% if active=='cookie-banner' %}aria-current="true" {% endif %}>
       Cookie banner
     </a>
   </li>

@@ -1,0 +1,83 @@
+{% extends "layouts/prototype.html" %}
+{% set active = "about-you" %}
+
+{% block pageTitle %}
+{{ serviceName }} prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/page-index-side-nav.njk" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.html">Page index</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Enrichment</span>
+      About you
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Section introduction</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/what-well-ask-about-you" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <p class="govuk-body"><a href="/future/what-well-ask-about-you">What we'll ask about you</a></p>
+      </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">About you</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/about-you" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          Existing page
+        </strong>
+        <p class="govuk-body"><a href="/future/about-you">About you</a></p>
+      </div>
+      </div>
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Check your answers</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/check-your-answers-1" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <p class="govuk-body"><a href="/future/check-your-answers-1">Check your answers</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

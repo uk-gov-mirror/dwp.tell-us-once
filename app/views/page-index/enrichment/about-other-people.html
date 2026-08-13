@@ -1,0 +1,110 @@
+{% extends "layouts/prototype.html" %}
+{% set active = "about-other-people" %}
+
+{% block pageTitle %}
+{{ serviceName }} prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/page-index-side-nav.njk" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.html">Page index</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Enrichment</span>
+      About other people
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Section introduction</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/what-well-ask-about-the-next-of-kin" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <p class="govuk-body"><a href="/future/what-well-ask-about-the-next-of-kin">Finally, what we'll ask about other people</a></p>
+      </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">About the next of kin</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/about-the-next-of-kin" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          Existing page
+        </strong>
+        <p class="govuk-body"><a href="/future/about-the-next-of-kin">About the next of kin</a></p>
+        <p class="govuk-body">This page will show if the user (informer) is not the next of kin.</p>
+      </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">About the partner of the person who died</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/about-the-spouse-not-spouse" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          Existing page
+        </strong>
+        <p class="govuk-body"><a href="/future/about-the-spouse-not-spouse">About the partner of the person who died</a></p>
+        <p class="govuk-body">This page will show if the person who died was married or in a civil partnership with someone other than the user (informer).</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/about-the-person-dealing-with-the-estate" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          Existing page
+        </strong>
+        <p class="govuk-body"><a href="/future/about-the-person-dealing-with-the-estate">About the person or company dealing with the estate</a></p>
+        <p class="govuk-body">This page will show if someone other than the informer or the next of kin is dealing with the estate of the person who died.</p>
+      </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Check your answers</h2>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/check-your-answers-4" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <h4 class="govuk-body"><a href="/future/check-your-answers-4">Check your answers</a></h4>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

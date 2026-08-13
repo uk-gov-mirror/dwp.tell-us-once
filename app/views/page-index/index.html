@@ -14,10 +14,6 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">  
-      {% include "includes/page-index-side-nav.njk" %}
-  </div>
-
   <div class="govuk-grid-column-two-thirds">
     <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
   <ol class="govuk-breadcrumbs__list">
@@ -29,11 +25,22 @@
     <h1 class="govuk-heading-xl">
         Page index
       </h1>
-        <p class="govuk-body">Find pages in the Tell Us Once prototype.</p>
-        <p class="govuk-body">Pages are grouped by the part of Tell Us Once they relate to.</p>
-        <p class="govuk-body">Page links open in a new tab.</p>
+        <p class="govuk-body-l">Find pages in the Tell Us Once prototype.</p>
+        </div>
+        </div>
+        <div class="govuk-grid-row govuk-!-margin-top-6">
+  <div class="govuk-grid-column-full">
+            <div class="tuo-card-group">
+      <a href="enrichment/before-starting-the-journey" class="tuo-card">
+        <h2 class="govuk-heading-m">Enrichment</h2>
+        <p class="govuk">The public facing Tell Us Once journey.</p>
+      </a>
+      <a href="" class="tuo-card">
+        <h2 class="govuk-heading-m">Capture</h2>
+        <p class="govuk">Used by registrars to record a death in Tell Us Once.</p>
+      </a>
+    </div>
   </div>
-
 </div>
 
 {% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layouts/prototype.html" %}
+{% set active = "service-timeout" %}
+
+{% block pageTitle %}
+Page index - Service timeout
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/page-index-side-nav.njk" %}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.html">Page index</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Global</span>
+      Service timeout
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/v0_1/global/service-timeout"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <p class="govuk-body"><a
+            href="/v0_1/global/service-timeout">Service timeout</a></p>
+            <p class="govuk-body">A dialog box with 2 minute countdown will be shown to users after 18 minutes of inactivity.</p>  
+        <p class="govuk-body">Demo: a service timeout dialog will appear after a few seconds.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/v0_1/global/service-timeout-no-answers"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <p class="govuk-body"><a
+            href="/v0_1/global/service-timeout-no-answers">Service timeout - no questions answered</a></p>
+        <p class="govuk-body">A dialog box with 2 minute countdown will be shown to users after 18 minutes of inactivity.</p>
+        <p class="govuk-body">Demo: a service timeout dialog will appear after a few seconds.</p>  
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/v0_1/global/your-answers-have-been-deleted"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <p class="govuk-body"><a
+            href="/v0_1/global/your-answers-have-been-deleted">Your answers have been deleted</a></p>
+            <p class="govuk-body">This page will be shown after 20 minutes of inactivity, if the user has entered answers.</p>  
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/v0_1/global/the-page-has-expired"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <p class="govuk-body"><a
+            href="/v0_1/global/the-page-has-expired">The page has exprired</a></p>
+            <p class="govuk-body">This page will be shown after 20 minutes of inactivity, if the user has not entered answers.</p>  
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

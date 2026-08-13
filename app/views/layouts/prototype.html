@@ -1,5 +1,10 @@
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
+{% block stylesheets %}
+{{ super() }}
+<link href="/public/css/tuo-cards.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block pageTitle %}
 {{serviceName}} prototype
 {% endblock %}

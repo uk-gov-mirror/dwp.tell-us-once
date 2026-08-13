@@ -1,0 +1,72 @@
+{% extends "layouts/prototype.html" %}
+{% set active = "before-we-send-the-information" %}
+
+{% block pageTitle %}
+Page index - before-starting-the-journey
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/page-index-side-nav.njk" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.html">Page index</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Enrichment</span>
+      Before we send the information
+    </h1>
+    <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+          <p class="govuk-heading-m">Before we send the information</p>
+        </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/before-we-send" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          Existing page
+        </strong>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--purple">
+          Design iterations
+        </strong>
+        <h4 class="govuk-body"><a href="/future/before-we-send">Before we send the information</a></h4>
+      </div>
+    </div>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+          <p class="govuk-heading-m">Check your answers before sending the information</p>
+        </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe" src="/future/check-your-answers-5" aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <h4 class="govuk-body"><a href="/future/check-your-answers-5">Check your answers before sending the information</a></h4>
+        <p class="govuk-body">If users choose to see see all their answers a final time before finishing the journey.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

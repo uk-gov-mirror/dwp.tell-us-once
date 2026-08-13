@@ -1,19 +1,6 @@
 {% extends "layouts/main.html" %}
 {% set pageName %}
-Finally, what we'll ask about
-{% if data['informer-next-of-kin'] == 'no' %}
-the next of kin,
-{% endif %}
-{% if (data['informer-relationship'] != 'Husband'
-and data['informer-relationship'] != 'Wife'
-and data['informer-relationship'] != 'Spouse'
-and data['informer-relationship'] != 'Civil Partner'
-and data['informer-relationship'] != 'Partner'
-) %}
-or the partner of the person who died
-{% endif %}
-{% if data['informer-deal-estate'] == 'no' %}and person dealing with the estate
-{% endif %}
+Finally, what we'll ask about other people
 {% endset %}
 {% set backLink = true %}
 
@@ -29,7 +16,7 @@ the next of kin,
 and data['informer-relationship'] != 'Wife'
 and data['informer-relationship'] != 'Spouse'
 and data['informer-relationship'] != 'Civil Partner'
-and data['informer-relationship'] != 'Partner'
+
 ) %}
 or the partner of the person who died
 {% endif %}

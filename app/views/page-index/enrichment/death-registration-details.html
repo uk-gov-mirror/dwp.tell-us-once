@@ -1,0 +1,110 @@
+{% extends "layouts/prototype.html" %}
+{% set active = "death-registration-details" %}
+
+{% block pageTitle %}
+{{ serviceName }} prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/page-index-side-nav.njk" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/index.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="../index.html">Page index</a>
+        </li>
+      </ol>
+    </nav>
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Enrichment</span>
+      Death registration details
+    </h1>
+    <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+          <p class="govuk-heading-m">Enter death registration details</p>
+        </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/future/enter-death-registration-details"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+         Existing page
+        </strong>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--purple">
+         Redesigned
+        </strong>
+        <h4 class="govuk-body"><a
+            href="/future/enter-death-registration-details">Enter death
+            registration details</a></h4>
+      </div>
+      </div>
+      <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-s">Unexpected journeys</h2>
+        </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/future/we-could-not-match-the-death-registration-details"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <p class="govuk-body"><a
+            href="/future/we-could-not-match-the-death-registration-details">We could not match the death registration details</a></p>
+        <p class="govuk-body">Users see this page when they have entered the incorrect details 3 times.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/v0_1/enrichment/enter-death-registration-details/this-page-has-expired"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2 govuk-tag--green">
+          New page
+        </strong>
+        <p class="govuk-body"><a
+            href="/v0_1/enrichment/enter-death-registration-details/this-page-has-expired">Sorry, this page has expired</a></p>
+        <p class="govuk-body">Users see this page when the session times out on the Enter death registration details page.</p>
+      </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+          <h3 class="govuk-heading-m">Registration details found</h3>
+        </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-iframe--container">
+          <iframe class="govuk-iframe"
+            src="/future/registration-details-found"
+            aria-hidden="true" tabindex="-1"></iframe>
+        </div>
+        <strong class="govuk-tag govuk-!-margin-bottom-2">
+          Existing page
+        </strong>
+        <p class="govuk-body"><a
+            href="/future/registration-details-found">Registration details found</a></p>
+      </div>
+      </div>
+  </div>
+
+</div>
+
+{% endblock %}
