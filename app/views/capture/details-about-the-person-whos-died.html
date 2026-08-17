@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+
+{% block pageTitle %}
+Enter death registration details
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Capture death registration details</span>
+    <h1 class="govuk-heading-l">Personal details about the person who died</h1>
+    <form class="form" action="enter-the-address-of-the-person-whos-died" method="post">
+      <div class="govuk-form-group govuk-!-margin-top-6">
+        <label class="govuk-label govuk-label--m" for="deceased-firstname">
+          First name
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="deceased-firstname" name="deceased-firstname" type="text" spellcheck="false" value="{{data['deceased-firstname']}}" aria-describedby="deceased-firstname-hint">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="deceased-surname">
+          Last name
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="deceased-surname" name="deceased-surname" type="text" spellcheck="false" autocomplete="none" value="{{data['deceased-surname']}}">
+      </div>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with name
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If they were known by a different name, enter the name that’s on official documents, for example, the name that's on their passport or driving licence.
+        </div>
+      </details>
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          Date of birth
+        </legend>
+
+        <div id="date-of-birth-hint" class="govuk-hint">
+          For example, 20 6 1950.
+        </div>
+
+        <div class="govuk-date-input" id="date-of-birth">
+
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" inputmode="numeric" value="{{data['date-of-birth-day']}}">
+            </div>
+          </div>
+
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" inputmode="numeric" value="{{data['date-of-birth-month']}}">
+            </div>
+          </div>
+
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" inputmode="numeric" value="{{data['date-of-birth-year']}}">
+            </div>
+          </div>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with date of birth
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              If you do not know their exact date of birth, enter the date they used on official documents, for example, on their passport or driving licence.
+            </div>
+          </details>
+        </div>
+      </fieldset>
+
+      <button class="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

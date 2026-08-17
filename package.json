@@ -20,6 +20,7 @@
     "dayjs": "^1.11.20",
     "govuk-frontend": "6.4.0",
     "govuk-prototype-kit": "^13.19.1",
+    "heroku": "^11.9.0",
     "hmrc-frontend": "7.27.0",
     "jquery": "4.0.0",
     "notifications-node-client": "8.4.0",

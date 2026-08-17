@@ -416,13 +416,13 @@ router.post('/v0_1/enrichment/check-answers', function (req, res) {
 // End Pensions journey
 
 // Capture journey
-router.post('/v0_1/capture/confirm-address', function (req, res) {
+router.post('/capture/confirm-address', function (req, res) {
 
   const referrer = req.get('Referrer')
   console.log(referrer);
 
-  if(referrer.includes("v0_1/capture/enter-an-address")){
-    return res.redirect('/v0_1/capture/confirm-address')
+  if(referrer.includes("/capture/enter-an-address")){
+    return res.redirect('/capture/confirm-address')
   }
 
   const address = req.session.data['deceased-address']
@@ -438,21 +438,21 @@ router.post('/v0_1/capture/confirm-address', function (req, res) {
   req.session.data['deceased-address-town'] = town;
   req.session.data['deceased-postcode'] = postcode;
 
-  res.redirect('/v0_1/capture/confirm-address')
+  res.redirect('/capture/confirm-address')
 
 })
 
-router.get('v0_1/capture/confirm-address', (req, res) => {
+router.get('/capture/confirm-address', (req, res) => {
     req.session.data['edit-address'] = 'false';
-    return res.render(`v0_1/capture/confirm-address`)
+    return res.render(`/capture/confirm-address`)
 });
 
-router.get('v0_1/capture/enter-an-address', (req, res) => {
+router.get('/capture/enter-an-address', (req, res) => {
     req.session.data['edit-address'] = req.query.editAddress;
-    return res.render(`v0_1/capture/enter-an-address`)
+    return res.render(`/capture/enter-an-address`)
 });
 
-router.post('/v0_1/capture/check-your-answers', function (req, res) {
+router.post('/capture/check-your-answers', function (req, res) {
   const dateOfBirth = normaliseDate(req.session.data['deceased-date-of-birth-day'], req.session.data['deceased-date-of-birth-month'], req.session.data['deceased-date-of-birth-year']);
   const dateOfDeath = normaliseDate(req.session.data['date-of-death-day'], req.session.data['date-of-death-month'], req.session.data['date-of-death-year']);
   const registrationDate = normaliseDate(req.session.data['registration-date-day'], req.session.data['registration-date-month'], req.session.data['registration-date-year']);
@@ -472,11 +472,11 @@ router.post('/v0_1/capture/check-your-answers', function (req, res) {
     req.session.data['registration-date'] = dateString;
     console.log("Registration date: " + req.session.data['registration-date'])
   }
-  res.redirect('/v0_1/capture/check-your-answers')
+  res.redirect('/capture/check-your-answers')
 
 })
 
-router.post('/v0_1/capture/select-who-will-complete-tell-us-once', function (req, res) {
+router.post('/capture/select-who-will-complete-tell-us-once', function (req, res) {
   const drt = req.session.data['death-registered-today'];
 
   if(drt == 'yes'){
@@ -492,20 +492,20 @@ router.post('/v0_1/capture/select-who-will-complete-tell-us-once', function (req
   req.session.data['registration-date'] = regDate;
   }
   
-  res.redirect('/v0_1/capture/select-who-will-complete-tell-us-once')
+  res.redirect('/capture/select-who-will-complete-tell-us-once')
 
 })
 
-router.post('/v0_1/capture/does-the-person-reporting-the-death-want-an-email-confirming-their-tell-us-once-reference-number', function (req, res) {
+router.post('/capture/does-the-person-reporting-the-death-want-an-email-confirming-their-tell-us-once-reference-number', function (req, res) {
   
   const informer = req.session.data['who-will-complete-tuo']
 
   console.log('Who will complete TUO?: ' + informer)
 
   if(informer == 'You, the registrar'){
-    return res.redirect('/v0_1/capture/check-your-answers')
+    return res.redirect('/capture/check-your-answers')
   } else {
-    return res.redirect('/v0_1/capture/does-the-person-reporting-the-death-want-an-email-confirming-their-tell-us-once-reference-number')
+    return res.redirect('/capture/does-the-person-reporting-the-death-want-an-email-confirming-their-tell-us-once-reference-number')
   }
 })
 // End Capture journey
