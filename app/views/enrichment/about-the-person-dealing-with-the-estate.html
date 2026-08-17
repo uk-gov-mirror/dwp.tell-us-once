@@ -1,14 +1,20 @@
 {% extends "layouts/main.html" %}
-{% set pageName="About the person or company dealing with the estate" %}
+{% set pageName="About the executor or administrator of the estate" %}
 {% set backLink = true %}
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">{{pageName}}</h1>
-    <p class="govuk-body">
-      This is the person or company with the legal right to deal with a person's property, money and posssessions (their estate) after they've died (also known as the executor or administrator of the will). If there is more than one executor, provide details of the person or company who would like to be contacted. Organisations you choose to notify will contact the approproate person if they need to.
-    </p>
+    <p class="govuk-body">Some of the organisations and services you've chosen to notify may need to contact an executor or administrator of the estate if they need more information.</p>
+    <p class="govuk-body">An executor or administrator is a person or company legally responsible for the money, property and possessions of the person who died.</p>
+    <p class="govuk-body">If the person who died left a will, an executor may be named in the will.</p>
+    <p class="govuk-body">An administrator can be appointed if:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>there's no will</li>
+      <li>no one is named as executor in the will</li>
+      <li>the named executor is unable or unwilling to act</li>
+    </ul>
 
     <form class="form" action="check-your-answers-4" method="post" novalidate>
     <!-- Is there a person or company dealing with the estate? -->
