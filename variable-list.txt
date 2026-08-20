@@ -1,4 +1,80 @@
-=== about-the-next-of-kin.html ===
+=== capture/check-your-answers.html ===
+contact-by-email
+date-of-birth-day
+date-of-birth-month
+date-of-birth-year
+date-of-death
+death-registered-today
+deceased-address-line-1
+deceased-address-line-2
+deceased-address-town
+deceased-firstname
+deceased-postcode
+deceased-surname
+email-address
+reference-source
+registration-date
+registration-district
+registration-number
+who-will-complete-tuo
+
+=== capture/confirm-address.html ===
+deceased-address-county
+deceased-address-line-1
+deceased-address-line-2
+deceased-address-town
+deceased-postcode
+
+=== capture/death-registration-details-shared-with-tell-us-once.html ===
+contact-by-email
+
+=== capture/death-registration-details.html ===
+date-of-death-day
+date-of-death-month
+date-of-death-year
+death-registered-today
+reference-source
+registration-date-day
+registration-date-month
+registration-date-year
+registration-district
+registration-number
+
+=== capture/details-about-the-person-whos-died.html ===
+date-of-birth-day
+date-of-birth-month
+date-of-birth-year
+deceased-firstname
+deceased-surname
+
+=== capture/does-the-person-reporting-the-death-want-an-email-confirming-their-tell-us-once-reference-number.html ===
+contact-by-email
+email-address
+
+=== capture/enter-an-address.html ===
+deceased-address-county
+deceased-address-line-1
+deceased-address-line-2
+deceased-address-town
+deceased-postcode
+edit-address
+
+=== capture/enter-the-address-of-the-person-whos-died.html ===
+deceased-address-house-number
+deceased-postcode
+
+=== capture/registration-source.html ===
+reference-source
+
+=== capture/select-an-address.html ===
+deceased-address
+deceased-address-house-number
+deceased-postcode
+
+=== capture/select-who-will-complete-tell-us-once.html ===
+who-will-complete-tuo
+
+=== enrichment/about-the-next-of-kin.html ===
 is-next-of-kin
 manual-address
 next-of-kin-address-country
@@ -15,66 +91,84 @@ next-of-kin-first-name
 next-of-kin-last-name
 next-of-kin-relationship
 next-of-kin-title
+version
 
-=== about-the-person-dealing-with-the-estate.html ===
-addressCountry
-addressCounty
-addressLine1
-addressLine2
-contact
-contactEmail
-contactNumber
+=== enrichment/about-the-person-dealing-with-the-estate.html ===
+executor-address-country
+executor-address-county
+executor-address-house-number
+executor-address-postcode
+executor-address-road
+executor-address-town
+executor-contact-number
+executor-email
+executor-name
 is-company-dealing-with-estate
-person-dealing-with-estate-same-address-as-person-whos-died
-person-or-company-dealing-with-estate
-width10
-width20
+is-there-an-executor
+manual-address
+manual-address2
+person-or-company-dealing-with-estate-address-county
+person-or-company-dealing-with-estate-address-house-number
+person-or-company-dealing-with-estate-address-postcode
+person-or-company-dealing-with-estate-address-road
+person-or-company-dealing-with-estate-address-town
+person-or-company-dealing-with-estate-contact-number
+person-or-company-dealing-with-estate-email
+person-or-company-dealing-with-estate-first-name
+person-or-company-dealing-with-estate-last-name
+person-or-company-dealing-with-estate-same-address
+person-or-company-dealing-with-estate-title
 
-=== about-the-person-whos-died.html ===
-deceased-address-result-type
-deceased-address-state
+=== enrichment/about-the-person-whos-died.html ===
 deceased-has-other-address
 deceased-marital-status
-deceased-other-address
+deceased-other-address-country
 deceased-other-address-county
-deceased-other-address-line-1
-deceased-other-address-line-2
+deceased-other-address-house-number
 deceased-other-address-postcode
-deceased-other-address-search-string
+deceased-other-address-road
 deceased-other-address-town
 deceased-title
-in-hospital-prior-to-death
+manual-address
+manual-address2
 place-of-death-address
-place-of-death-address-county
-place-of-death-address-line-1
-place-of-death-address-line-2
-place-of-death-address-postcode
-place-of-death-address-result-type
-place-of-death-address-search-string
-place-of-death-address-selection
-place-of-death-address-state
-place-of-death-address-town
+place-of-death-country
+place-of-death-county
 place-of-death-name
+place-of-death-postcode
+place-of-death-road
+place-of-death-town
+version
 
-=== about-the-spouse-not-spouse.html ===
-addressCounty
-addressTown
-changedName
-contact
-contactEmail
-date-of-death
-passport-issued-month
-passport-issued-year
-reference
-sort
+=== enrichment/about-the-spouse-not-spouse.html ===
+manual-address
+permisson-to-share-spouse-details
+spouse-address-country
+spouse-address-county
+spouse-address-house-number
+spouse-address-postcode
+spouse-address-road
+spouse-address-town
+spouse-deal-with-estate
+spouse-dob-day
+spouse-dob-year
+spouse-email
+spouse-first-name
+spouse-last-name
+spouse-ni-number
+spouse-relationship
+spouse-same-address
+spouse-title
+version
 
-=== about-the-spouse.html ===
-date-of-death
-passport-issued-month
-passport-issued-year
-reference
+=== enrichment/about-the-spouse.html ===
+informer-relationship
+spouse-dob-day
+spouse-dob-month
+spouse-dob-year
+spouse-ni-number
 
-=== about-you.html ===
+=== enrichment/about-you.html ===
 informer-address-country
 informer-address-county
 informer-address-house-number
@@ -93,17 +187,18 @@ informer-title
 manual-address
 version
 
-=== before-we-send.html ===
+=== enrichment/agent/before-we-send_agent.html ===
 agree
 changedName
 contact
+waste
 
-=== before-you-start.html ===
-authority-consent
-showAuthorityError
-version
+=== enrichment/before-we-send.html ===
+agree
+welsh-communication
 
-=== check-your-answers-1.html ===
+=== enrichment/check-your-answers-1.html ===
+deceased-marital-status
 informer-address-country
 informer-address-county
 informer-address-house-number
@@ -119,7 +214,85 @@ informer-next-of-kin
 informer-relationship
 informer-same-address
 informer-title
+spouse-dob-day
+spouse-dob-month
+spouse-dob-year
+spouse-ni-number
+
+=== enrichment/check-your-answers-2.html ===
+deceased-has-other-address
+deceased-marital-status
+deceased-other-address-country
+deceased-other-address-county
+deceased-other-address-house-number
+deceased-other-address-postcode
+deceased-other-address-road
+deceased-other-address-town
+deceased-title
+has-ni-number
+in-hospital-prior-to-death
+informer-deal-estate
+informer-next-of-kin
+local-council
+ni-number
+place-of-death-address
+place-of-death-country
+place-of-death-county
+place-of-death-name
+place-of-death-postcode
+place-of-death-road
+place-of-death-town
+
+=== enrichment/check-your-answers-3.html ===
+adult-social-services
+armed-forces-compensation-scheme
+armed-forces-pension-scheme
+blue-badge
+blue-badge-number
+concessionary-travel
+council-tax
+council-tax-over-18
+deceased-marital-status
+driving-licence
+driving-licence-number
+dwp
+electoral-services
+has-ni-number
+hmrc-benefits-and-credits
+hmrc-personal-tax
+housing-benefit
+informer-deal-estate
+informer-next-of-kin
+library-services
+ni-number
+passport
+passport-number
+passport-number-2
+pensions
+registered-keeper
+sundry-debts
+town-of-birth
+vehicle-registration-number-1
+vehicle-registration-number-2
+vehicle-registration-number-3
+vehicle-registration-number-4
+vehicle-registration-number-5
+version
+war-pensions-scheme
+
+=== enrichment/check-your-answers-4.html ===
+deceased-marital-status
+executor-address-country
+executor-address-county
+executor-address-house-number
+executor-address-postcode
+executor-address-road
+executor-address-town
+informer-deal-estate
+informer-relationship
+is-company-dealing-with-estate
 is-next-of-kin
+is-there-an-executor
 next-of-kin-address-country
 next-of-kin-address-county
 next-of-kin-address-house-number
@@ -127,35 +300,171 @@ next-of-kin-address-postcode
 next-of-kin-address-road
 next-of-kin-address-town
 next-of-kin-contact
-next-of-kin-contact-email
-next-of-kin-contact-number
-next-of-kin-deal-estate
 next-of-kin-first-name
 next-of-kin-last-name
 next-of-kin-relationship
 next-of-kin-title
+permisson-to-share-spouse-details
+person-or-company-dealing-with-estate-address-country
+person-or-company-dealing-with-estate-address-county
+person-or-company-dealing-with-estate-address-house-number
+person-or-company-dealing-with-estate-address-postcode
+person-or-company-dealing-with-estate-address-road
+person-or-company-dealing-with-estate-address-town
+person-or-company-dealing-with-estate-contact-number
+person-or-company-dealing-with-estate-email
+person-or-company-dealing-with-estate-first-name
+person-or-company-dealing-with-estate-last-name
+person-or-company-dealing-with-estate-same-address
+person-or-company-dealing-with-estate-title
+spouse-address-country
+spouse-address-county
+spouse-address-house-number
+spouse-address-postcode
+spouse-address-road
+spouse-address-town
+spouse-deal-with-estate
+spouse-dob-day
+spouse-dob-month
+spouse-dob-year
+spouse-email
+spouse-first-name
+spouse-last-name
+spouse-ni-number
+spouse-relationship
+spouse-same-address
+spouse-title
 
-=== check-your-answers-2.html ===
+=== enrichment/check-your-answers-5.html ===
+adult-social-services
+armed-forces-compensation-scheme
+armed-forces-pension-scheme
+blue-badge
+blue-badge-number
+concessionary-travel
+council-tax
+council-tax-over-18
 deceased-has-other-address
 deceased-marital-status
-deceased-other-address
+deceased-other-address-country
+deceased-other-address-county
+deceased-other-address-house-number
+deceased-other-address-postcode
+deceased-other-address-road
+deceased-other-address-town
+deceased-title
+driving-licence
+driving-licence-number
+dwp
+electoral-services
+executor-address-country
+executor-address-county
+executor-address-house-number
+executor-address-postcode
+executor-address-road
+executor-address-town
+has-ni-number
+hmrc-benefits-and-credits
+hmrc-personal-tax
+housing-benefit
+in-hospital-prior-to-death
+informer-address-country
+informer-address-county
+informer-address-house-number
+informer-address-postcode
+informer-address-road
+informer-address-town
+informer-contact-email
+informer-contact-number
+informer-deal-estate
+informer-first-name
+informer-last-name
+informer-next-of-kin
+informer-relationship
+informer-same-address
+informer-title
+is-company-dealing-with-estate
+is-next-of-kin
+is-there-an-executor
+library-services
+local-council
+next-of-kin-address-country
+next-of-kin-address-county
+next-of-kin-address-house-number
+next-of-kin-address-postcode
+next-of-kin-address-road
+next-of-kin-address-town
+next-of-kin-contact
+next-of-kin-first-name
+next-of-kin-last-name
+next-of-kin-relationship
+next-of-kin-title
+ni-number
+passport
+passport-number
+passport-number-2
+pensions
+permisson-to-share-spouse-details
+person-or-company-dealing-with-estate-address-country
+person-or-company-dealing-with-estate-address-county
+person-or-company-dealing-with-estate-address-house-number
+person-or-company-dealing-with-estate-address-postcode
+person-or-company-dealing-with-estate-address-road
+person-or-company-dealing-with-estate-address-town
+person-or-company-dealing-with-estate-contact-number
+person-or-company-dealing-with-estate-email
+person-or-company-dealing-with-estate-first-name
+person-or-company-dealing-with-estate-last-name
+person-or-company-dealing-with-estate-same-address
+person-or-company-dealing-with-estate-title
+place-of-death-address
+place-of-death-country
+place-of-death-county
+place-of-death-name
+place-of-death-postcode
+place-of-death-road
+place-of-death-town
+registered-keeper
+spouse-address-country
+spouse-address-county
+spouse-address-house-number
+spouse-address-postcode
+spouse-address-road
+spouse-address-town
+spouse-deal-with-estate
+spouse-dob-day
+spouse-dob-month
+spouse-dob-year
+spouse-email
+spouse-first-name
+spouse-last-name
+spouse-ni-number
+spouse-relationship
+spouse-same-address
+spouse-title
+sundry-debts
+town-of-birth
+vehicle-registration-number-1
+vehicle-registration-number-2
+vehicle-registration-number-3
+vehicle-registration-number-4
+vehicle-registration-number-5
+war-pensions-scheme
+
+=== enrichment/confirmation.html ===
 deceased-surname
 deceased-title
-has-ni-number
-in-hospital-prior-to-death
-local-council
-ni-number
-pensions
-place-of-death-address
-place-of-death-address-selection
-place-of-death-name
-public-sector-pensions-found
 
-=== email-confirmation.html ===
-contact
-contactByEmail
+=== enrichment/email-confirmation-preview.html ===
+theme-color
+viewport
 
-=== enter-death-registration-details.html ===
+=== enrichment/email-confirmation.html ===
+confirmation-email
+confirmation-email-address
+informer-contact-email
+
+=== enrichment/enter-death-registration-details.html ===
 date-of-death-day
 date-of-death-month
 date-of-death-year
@@ -164,32 +473,128 @@ registration-lookup-attempts
 registration-number
 version
 
-=== local-council-services.html ===
+=== enrichment/future/address-lookup/address-enhancement-full-example.html ===
+addr
+addressCounty
+addressLine1
+addressLine2
+addressPostcode
+addressTown
+email
+fname
+lname
+phoneNumber
+postcode
+rel
+resultType
+searchString
+state
+yourFullAddress
+
+=== enrichment/future/address-lookup/address-lookup-single-page-old.html ===
+addressCounty
+addressLine1
+addressLine2
+addressPostcodeManual
+addressTown
+postcode
+searchString
+
+=== enrichment/future/address-lookup/confirm-address.html ===
+informer-address-line-1
+informer-address-line-2
+informer-address-town
+informer-postcode
+
+=== enrichment/future/address-lookup/enter-an-address-outside-of-the-uk.html ===
+informer-address-country
+informer-address-line-1
+informer-address-line-2
+informer-address-line-3
+informer-address-line-4
+
+=== enrichment/future/address-lookup/find-address-single-page.html ===
+addr
+addressCounty
+addressLine1
+addressLine2
+addressPostcode
+addressTown
+postcode
+resultType
+searchString
+state
+yourFullAddress
+
+=== enrichment/future/address-lookup/manually-enter-address.html ===
+informer-address-county
+informer-address-line-1
+informer-address-line-2
+informer-address-postcode
+informer-address-town
+
+=== enrichment/future/address-lookup/no-address-found.html ===
+informer-address-house-number
+informer-postcode
+
+=== enrichment/future/address-lookup/select-address.html ===
+informer-address
+informer-postcode
+
+=== enrichment/future/address-lookup/what-is-your-address.html ===
+informer-address-house-number
+informer-postcode
+
+=== enrichment/local-council-services.html ===
 local-council
 
-=== registration-details-found.html ===
+=== enrichment/no-public-sector-pensions-found.html ===
+ni-number
+
+=== enrichment/notify-a-public-sector-pension-provider.html ===
+ni-number
+notify-pension
+
+=== enrichment/notify-a-public-sector-pension.html ===
+ni-number
+pensions
+
+=== enrichment/registration-details-found.html ===
 date-of-death-day
 date-of-death-month
 date-of-death-year
 deceased-surname
 
-=== their-national-insurance-number.html ===
+=== enrichment/their-national-insurance-number.html ===
 has-ni-number
 ni-number
+version
 
-=== who-do-you-want-to-notify.html ===
+=== enrichment/what-to-do-after-someone-dies.html ===
+giraffe
+url
+what_doing
+what_wrong
+
+=== enrichment/what-well-ask-about-the-next-of-kin.html ===
+deceased-marital-status
+informer-deal-estate
+informer-next-of-kin
+informer-relationship
+version
+
+=== enrichment/who-do-you-want-to-notify.html ===
 adult-social-services
 armed-forces-compensation-scheme
 armed-forces-pension-scheme
-assisted-waste
 blue-badge
-blue-badge-reference
+blue-badge-number
 concessionary-travel
 council-tax
-council-tax-18
+council-tax-over-18
 driving-licence
 driving-licence-number
-dwp-benefits
+dwp
 electoral-services
 hmrc-benefits-and-credits
 hmrc-personal-tax
@@ -198,13 +603,117 @@ library-services
 passport
 passport-number
 passport-number-2
-passport-place-of-birth
 registered-keeper
 sundry-debts
+town-of-birth
 vehicle-registration-number-1
 vehicle-registration-number-2
 vehicle-registration-number-3
 vehicle-registration-number-4
 vehicle-registration-number-5
+version
 war-pensions-scheme
+
+=== v1/confirm-registration-details.html ===
+date-of-death
+deceased-forename
+deceased-surname
+
+=== v1/deceased-details/next-of-kin/are-you-the-next-of-kin.html ===
+deceased-forename
+deceased-next-of-kin-informer
+deceased-surname
+
+=== v1/deceased-details/next-of-kin/next-of-kin-check-answers.html ===
+deceased-forename
+deceased-next-of-kin-informer
+deceased-surname
+next-of-kin-contact-preference
+next-of-kin-name
+next-of-kin-relationship
+next-of-kin-relationship-other-text
+
+=== v1/deceased-details/next-of-kin/next-of-kin-contact-preference.html ===
+next-of-kin-contact-preference
+next-of-kin-name
+
+=== v1/deceased-details/next-of-kin/next-of-kin-name.html ===
+next-of-kin-name
+
+=== v1/deceased-details/next-of-kin/next-of-kin-relationship-to-deceased.html ===
+deceased-forename
+deceased-surname
+next-of-kin-name
+next-of-kin-relationship
+next-of-kin-relationship-other-text
+
+=== v1/deceased-details/spouse-or-partner/confirm-informer.html ===
+deceased-forename
+deceased-next-of-kin-informer
+deceased-surname
+informer-relationship
+
+=== v1/informer-details/informer-address-manually-enter.html ===
+informer-address-county
+informer-address-line-1
+informer-address-line-2
+informer-address-postcode
+informer-address-town
+
+=== v1/informer-details/informer-address.html ===
+informer-address-house-number
+informer-postcode
+
+=== v1/informer-details/informer-confirm-address.html ===
+informer-address-line-1
+informer-address-line-2
+informer-address-town
+informer-postcode
+
+=== v1/informer-details/informer-details-check-answers.html ===
+deceased-forename
+deceased-surname
+informer-address-county
+informer-address-line-1
+informer-address-line-2
+informer-address-postcode
+informer-address-town
+informer-name
+informer-relationship
+informer-same-address
+
+=== v1/informer-details/informer-name.html ===
+informer-name
+
+=== v1/informer-details/informer-no-address-found.html ===
+informer-address-house-number
+informer-postcode
+
+=== v1/informer-details/informer-relationship.html ===
+deceased-forename
+deceased-surname
+informer-relationship
+informer-relationship-other-text
+
+=== v1/informer-details/informer-same-address-as-deceased.html ===
+deceased-forename
+deceased-surname
+informer-same-address
+
+=== v1/informer-details/informer-select-address.html ===
+informer-address
+informer-postcode
+
+=== v1/registration-lookup.html ===
+date-of-death-day
+date-of-death-month
+date-of-death-year
+deceased-surname
+registration-number
+
+=== v1/task-list.html ===
+deceased-forename
+deceased-surname
+informer-details-status
+next-of-kin-status
 
