@@ -15,8 +15,10 @@
     Your reference number<br><strong class="govuk-input--extra-letter-spacing">NTUO JHRN G8XT</strong>
   </div>
 </div>
-  <p class="govuk-body govuk-!-padding-top-9 govuk-!-padding-bottom-7"><a href="#">Print or save this page</a></p>
 
+{% if data['confirmation-email'] == 'yes-different-address' or data['confirmation-email'] == 'confirmation-email-yes-same-address' %}
+<div class="govuk-inset-text">We’ve sent an email to the email address provided which includes the information that’s on this page. </div>
+{% endif %}
   <p class="govuk-body">Thank you for reporting {{data['deceased-title']}} {{data['deceased-surname']}}'s death.</p>
   <p class="govuk-body">Please take a note of your reference number in case you need to contact us.</p>
   <p class="govuk-body govuk-!-font-weight-bold">Using this service does not form any part of a claim to benefits.</p>
@@ -83,6 +85,8 @@ If the person who died had a public sector pension, contact the pension provider
 
 <h2 class="govuk-heading-m govuk-!-padding-top-6">Who else to tell about a death</h2>
     <p class="govuk-body">Use this <a href="#">checklist to consider who else to tell about the death</a></p>    
+
+    <p class="govuk-body govuk-!-padding-top-9 govuk-!-padding-bottom-7"><a href="#">Print or save this page</a></p>
 
 <h2 class="govuk-heading-m">Feedback</h2>
     <p class="govuk-body"><a href="#">What did you think of this service?</a> (Takes 30 seconds)</p> 

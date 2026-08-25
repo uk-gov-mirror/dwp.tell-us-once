@@ -4,6 +4,7 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="before-we-send" method="post" novalidate>
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -15,15 +16,15 @@
         <div class="govuk-radios" data-module="govuk-radios">
           {% if data['informer-contact-email'] %}
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="confirmation-email" name="confirmation-email" type="radio" value="yes" data-aria-controls="conditional-confirmation-email">
-            <label class="govuk-label govuk-radios__label" for="confirmation-email">
+            <input class="govuk-radios__input" id="confirmation-email-yes-same-address" name="confirmation-email" type="radio" value="yes-same-address" data-aria-controls="conditional-confirmation-email">
+            <label class="govuk-label govuk-radios__label" for="confirmation-email-yes-same-address">
               Yes, send it to {{data['informer-contact-email']}}
             </label>
           </div>
           {% endif %}
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="confirmation-email" name="confirmation-email" type="radio" value="yes" data-aria-controls="conditional-confirmation-email">
-            <label class="govuk-label govuk-radios__label" for="confirmation-email">
+            <input class="govuk-radios__input" id="confirmation-email-yes-different-address" name="confirmation-email" type="radio" value="yes-different-address" data-aria-controls="conditional-confirmation-email">
+            <label class="govuk-label govuk-radios__label" for="confirmation-email-yes-different-address">
               Yes{% if data['informer-contact-email'] %}, send it to a different email address{% endif %}
             </label>
           </div>
@@ -36,8 +37,8 @@
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="confirmation-email-2" name="confirmation-email" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="confirmation-email-2">
+            <input class="govuk-radios__input" id="confirmation-email-no" name="confirmation-email" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="confirmation-email-no">
               No
             </label>
           </div>
@@ -47,7 +48,7 @@
 
     <!---------button-------->
 
-    <form class="form" action="before-we-send" method="post" novalidate>
+    
       <button class="govuk-button">Continue</button>
     </form>
 </div>
