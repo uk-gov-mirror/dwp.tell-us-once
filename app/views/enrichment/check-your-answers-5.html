@@ -156,7 +156,7 @@
           {% endif %}
         </dl>
 
-        <!---------About you-------->
+        <!---------About the person who died-------->
         <h2 class="govuk-heading-m govuk-!-padding-top-2">About the person who died</h2>
 
         <dl class="govuk-summary-list">
@@ -1052,8 +1052,65 @@
     </dl>
     {% endif %}
 
-        <form class="form" action="before-we-send" method="post" novalidate>
-          <button class="govuk-button">Continue</button>
+    <!---------Communication preferences-------->
+        <h2 class="govuk-heading-m govuk-!-padding-top-2">Communication preferences</h2>
+
+<dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want an email confirmation?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {% if data['confirmation-email'] == "yes-same-address" %}
+            Yes, send it to {{data['informer-contact-email']}}
+          {% elif data['confirmation-email'] == 'yes-different-address' %}
+            Yes{% if data['informer-contact-email'] %}, send it to a different email address{% endif %}
+          {% else %}
+          {{data['confirmation-email'] | capitalize }}
+          {% endif %}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="who-do-you-want-to-notify">Change<span class="govuk-visually-hidden"> is there a next of kin?</span></a>
+        </dd>
+      </div>
+      {% if data['confirmation-email'] == "yes-different-address" %}
+            <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['confirmation-email-address'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="who-do-you-want-to-notify">Change<span class="govuk-visually-hidden"> is there a next of kin?</span></a>
+        </dd>
+      </div>
+      {% endif %}
+                  <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to be contacted in Welsh?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['communication-in-welsh'] | capitalize }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="who-do-you-want-to-notify">Change<span class="govuk-visually-hidden"> is there a next of kin?</span></a>
+        </dd>
+      </div>
+      </dl>
+
+      <!-- Before we send the information -->
+      <h2 class="govuk-heading-m govuk-!-padding-top-6">Before we send the information</h2>
+      <p class="govuk-body">You have now completed section 5 of 5.</p>
+      <p class="govuk-body">By sending the information, you give permisson for Tell Us Once to share information with organisations and services you have chosen to notify about the death. This includes the information you have given about:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the person who died</li>
+        <li>you</li>
+        <li>the next of kin</li>
+        <li>the executor or person dealing with the estate</li>
+      </ul>
+        <form class="form" action="confirmation" method="post" novalidate>
+          <button class="govuk-button">I agree&mdash;send the information</button>
         </form>
       </div>
     </div>

@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+{% set pageName="Do you want to be contacted in Welsh?" %}
+{% set backLink = true %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="check-your-answers-5" method="post" novalidate>
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="communication-in-welsh-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        {{pageName}}
+      </h1>
+    </legend>
+    <div id="communication-in-welsh-hint" class="govuk-hint">
+      You can request organisations and services you have chosen to notify about the death to contact you in Welsh.
+    </div>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="communication-in-welsh" name="communication-in-welsh" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="communication-in-welsh">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="communication-in-welsh-2" name="communication-in-welsh" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="communication-in-welsh-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+    <!---------button-------->
+
+    
+      <button class="govuk-button">Continue</button>
+    </form>
+</div>
+</div>
+    <!-- Contact us -->
+    {% include "includes/contact.njk" %}
+
+    {% endblock %}

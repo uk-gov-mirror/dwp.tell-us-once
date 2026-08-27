@@ -1,61 +1,112 @@
-{% extends "layouts/main.html" %}
-{% set pageName="Enter death registration details" %}
-{% set backLink = true %}
-
-{% block content %}
+{% extends "layouts/main.html" %} {% set pageName="Enter death registration
+details" %} {% set backLink = true %} {% block content %}
 
 <div class="govuk-grid-row">
-  {% if data['registration-lookup-attempts'] > -1 %}
-  <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner-error" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner" data-govuk-notification-banner-init="">
-          <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-              Error
-            </h2>
-          </div>
-          <div class="govuk-notification-banner__content">
-            <p class="govuk-notification-banner__heading">
-              The death registration details do not match
-             </p>
-             <p class="govuk-body">We cannot match the reference number, surname and date of death you entered. Check
-          you've entered them correctly and try again.</p>
+  <!-- Death registration details do not match error -->
+  <div id="details-mismatch-error" class="govuk-grid-column-two-thirds" hidden>
+    <div
+      class="govuk-notification-banner-error"
+      role="alert"
+      aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner"
+      data-govuk-notification-banner-init=""
+    >
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          The death registration details do not match
+        </p>
+        <p class="govuk-body">
+          We cannot match the reference number, surname and date of death you
+          entered. Check you've entered them correctly and try again.
+        </p>
 
-             <p class="govuk-body">You will be locked out for 20 minutes if you enter the incorrect details 3 times.</p>
-            
-          </div>
-        </div>
+        <p class="govuk-body">
+          You will be locked out for 20 minutes if you enter the incorrect
+          details 3 times.
+        </p>
+      </div>
+    </div>
   </div>
-  {% endif %}
+  <!---->
+  <!-- Death registration details do not match error -->
+  <div id="details-not-found-error" class="govuk-grid-column-two-thirds" hidden>
+    <div
+      class="govuk-notification-banner-error"
+      role="alert"
+      aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner"
+      data-govuk-notification-banner-init=""
+    >
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">There is a problem</p>
+        <p class="govuk-body">
+          We cannot match the Tell Us Once reference number you entered. Check
+          it and try again. 
+        </p>
+
+        <p class="govuk-body">
+          If the reference number was issued more than 28 days ago, you'll need
+          a new one to use Tell Us Once. To check if you can get a new reference
+          number,
+          <a href=""
+            >contact the register office where the death was registered (opens
+            in new tab)</a
+          >.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!---->
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">
-      {{pageName}}
-    </h1>
-    
-    <p class="govuk-body">When the death was registered, the registrar provided a:</p>
+    <h1 class="govuk-heading-l">{{pageName}}</h1>
+
+    <p class="govuk-body">
+      When the death was registered, the registrar provided a:
+    </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>Tell Us Once reference number</li>
       <li>death certificate</li>
     </ul>
-    <p class="govuk-body">Enter the registration details from these documents so we can find the details of the person
-      who's died.</p>
-    <form class="form" action="/{{ data.version }}/lookup-death-registration" method="post">
+    <p class="govuk-body">
+      Enter the registration details from these documents so we can find the
+      details of the person who's died.
+    </p>
+    <form
+      class="form"
+      action="/{{ data.version }}/lookup-death-registration"
+      method="post"
+    >
       <div class="govuk-form-group govuk-!-margin-top-6">
         <label class="govuk-label govuk-label--m" for="registration-number">
           Tell Us Once reference number
         </label>
         <div id="registration-number-hint" class="govuk-hint">
-          For example, <span class="tuo-extra-letter-spacing">AB123C456DE7</span>.
+          For example,
+          <span class="tuo-extra-letter-spacing">AB123C456DE7</span>.
         </div>
-        <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="registration-number"
-          name="registration-number" type="text" spellcheck="false" value="{{data['registration-number']}}"
-          aria-describedby="registration-number-hint">
+        <input
+          class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing"
+          id="registration-number"
+          name="registration-number"
+          type="text"
+          spellcheck="false"
+          value="{{data['registration-number']}}"
+          aria-describedby="registration-number-hint"
+        />
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--m" for="deceased-surname">
           Surname of the person who's died
         </label>
-        <input class="govuk-input" id="deceased-surname" name="deceased-surname" type="text" spellcheck="false"
-          autocomplete="none" value="{{data['deceased-surname']}}">
+        <input
+          class="govuk-input"
+          id="deceased-surname"
+          name="deceased-surname"
+          type="text"
+          spellcheck="false"
+          autocomplete="none"
+          value="{{data['deceased-surname']}}"
+        />
       </div>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="date-of-death-hint">
@@ -63,49 +114,136 @@
             What date did they die?
           </legend>
           <div id="date-of-death-hint" class="govuk-hint">
-            This is the date that's on the death certificate. For example, 16 3 2026.
+            This is the date that's on the death certificate. For example, 16 3
+            2026.
           </div>
           <div class="govuk-date-input" id="date-of-death">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="date-of-death-day">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="date-of-death-day"
+                >
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-death-day"
-                  name="date-of-death-day" type="text" inputmode="numeric" value="{{data['date-of-death-day']}}">
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="date-of-death-day"
+                  name="date-of-death-day"
+                  type="text"
+                  inputmode="numeric"
+                  value="{{data['date-of-death-day']}}"
+                />
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="date-of-death-month">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="date-of-death-month"
+                >
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-death-month"
-                  name="date-of-death-month" type="text" inputmode="numeric" value="{{data['date-of-death-month']}}">
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="date-of-death-month"
+                  name="date-of-death-month"
+                  type="text"
+                  inputmode="numeric"
+                  value="{{data['date-of-death-month']}}"
+                />
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="date-of-death-year">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="date-of-death-year"
+                >
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-death-year"
-                  name="date-of-death-year" type="text" inputmode="numeric" value="{{data['date-of-death-year']}}">
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-4"
+                  id="date-of-death-year"
+                  name="date-of-death-year"
+                  type="text"
+                  inputmode="numeric"
+                  value="{{data['date-of-death-year']}}"
+                />
               </div>
             </div>
           </div>
         </fieldset>
       </div>
 
-      {{ govukButton({
-      text: "Continue"
-      }) }}
-
+      {{ govukButton({ text: "Continue" }) }}
     </form>
-
   </div>
 </div>
 
-  {% include "includes/contact.njk" %}
+{% include "includes/contact.njk" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-9">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- This section is for controlling the prototype - not for prod -->
+    <div class="prototype-options">
+      <div class="prototype-options-header-container">
+        <h3 class="govuk-heading-s prototype-options-header">
+          Prototype options
+        </h3>
+      </div>
+      <div class="prototype-options-content">
+        <ul class="govuk-list govuk-!-margin-bottom-0">
+          <li>
+            <a href="#" id="show-details-mismatch-error"
+              >Show death registration details do not match error</a
+            >
+          </li>
+          <li>
+            <a href="#" id="show-details-not-found-error"
+              >Show unknown reference number error</a
+            >
+          </li>
+          <li>
+            <a href="email-confirmation-preview" target="_blank"
+              >Go to registration details do not match lockout page</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End -->
+  </div>
+</div>
+
+<script>
+  document
+    .getElementById("show-details-mismatch-error")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const banner = document.getElementById("details-mismatch-error");
+
+      banner.hidden = !banner.hidden;
+
+      this.textContent = banner.hidden
+        ? "Show death registration details do not match error"
+        : "Hide death registration details do not match error";
+    });
+
+  document
+    .getElementById("show-details-not-found-error")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const banner = document.getElementById("details-not-found-error");
+
+      banner.hidden = !banner.hidden;
+
+      this.textContent = banner.hidden
+        ? "Show unknown reference number error"
+        : "Hide unknown reference number error";
+    });
+</script>
 
 {% endblock %}
