@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+{% set pageName="Before we send the information" %}
+{% set backLink = true %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+     <!-- Check all your answers -->
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      You can check all your answers again.
+      <a class="govuk-notification-banner__link" href="check-your-answers-5">Check your answers</a>.
+    </p>
+  </div>
+</div>
+
+    <h1 class="govuk-heading-l">Before we send the information</h1>
+
+    <p class="govuk-body">
+      You've given Tell Us Once permission to notify the government departments
+      you have selected about the death. The departments will update their
+      records. They will not need to see the death certificate.
+    </p>
+
+    <p class="govuk-body">
+      Tell Us Once will share the information you have provided about yourself,
+      the next of kin and person dealing with the estate.
+    </p>
+
+    <p class="govuk-body">
+      If any of the departments need more information, they will contact the
+      next of kin or the person dealing with the estate.
+    </p>
+
+    <p class="govuk-body">
+      All the information you have provided will be protected and shared
+      securely. The departments will only be given information that will be used
+      by them and will treat your information securely and confidentially .Find
+      out more by reading the departments' privacy policies.
+    </p>
+
+    <p class="govuk-body">You told us you want to notify:</p>
+
+    <!---------List-------->
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        Department for Work and Pensions (DWP) - Benefits and Entitlements
+      </li>
+      <li>HM Revenue and Customs (HMRC) - Personal Tax</li>
+      <li>HM Revenue and Customs (HMRC) - Benefits and Credits</li>
+      <li>London Borough of Lewisham Council - Council Tax</li>
+      <li>London Borough of Lewisham Council - Library Services</li>
+      <li>London Borough of Lewisham Council - Blue Badge</li>
+      <li>HM Passport Office (HMPO) - Passport</li>
+      <li>Driver and Vehicle Licensing Agency (DVLA) - Driving Licence</li>
+      <li>My Civil Service Pension</li>
+    </ul>
+
+    <!---------Checkbox-------->
+
+    <div class="govuk-form-group govuk-!-padding-top-2">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agree" data-aria-controls="agree" />
+            <label class="govuk-label govuk-checkboxes__label" for="agree">
+              I agree that the information I have provided may be shared with
+              the government and council organisations listed above
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Welsh communication -->
+
+    <h2 class="govuk-heading-m">If you live in Wales</h2>
+    <p class="govuk-body">
+      If any of the organisations or departments you've chosen to notify need to contact you, you can ask them to contact you in Welsh. If they're able to, they will.
+    </p>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="welsh-communication" name="welsh-communication" type="checkbox" value="welsh-communication">
+            <label class="govuk-label govuk-checkboxes__label" for="welsh-communication">
+              I live in Wales, and want further communication in Welsh
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Confirm and send -->
+    <form class="form" action="confirmation" method="post" novalidate>
+      <button class="govuk-button">Confirm and send</button>
+    </form>
+
+  </div>
+</div>
+
+<!-- Contact us -->
+{% include "includes/contact.njk" %}
+
+{% endblock %}

@@ -65,6 +65,22 @@ router.post("/:version/relationship-to-deceased", function (req, res) {
   return res.redirect("check-your-answers-1");
 });
 
+// ---------- Post: Local council services ----------
+router.post("/:version/select-local-council", function (req, res) {
+  const localCouncilSelect = req.session.data["local-council-select"];
+
+  console.log("Local council select: " + localCouncilSelect);
+
+  const localCouncil = "Herefordshire Council";
+
+  if (localCouncilSelect === "yes") {
+    req.session.data["local-council"] = "Herefordshire Council";
+    return res.redirect("check-your-answers-2");
+  } else if (localCouncilSelect === "no") {
+    return res.redirect("select-local-council");
+  }
+});
+
 // ---------- Post: About the spouse ----------
 router.post("/:version/check-your-answers-1", function (req, res) {
   const edit = req.session.data["edit"];

@@ -24,7 +24,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              HMRC Personal Tax
+              HMRC personal Tax
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['hmrc-personal-tax'] | capitalize}}
@@ -35,7 +35,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              HMRC Benefits and Credits
+              HMRC benefits and credits
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['hmrc-benefits-and-credits'] | capitalize}}
@@ -46,7 +46,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Council Tax
+              Council tax
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['council-tax'] | capitalize}}
@@ -58,7 +58,7 @@
           {% if data['council-tax'] == 'yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              People over age of 18 in the property
+              How many people over the age of 18 now live in the property? (Optopnal)
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['council-tax-over-18']}}
@@ -81,7 +81,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Library Services
+              Library services
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['library-services'] | capitalize}}
@@ -92,7 +92,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Electoral Services
+              Electoral services
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['electoral-services'] | capitalize}}
@@ -103,7 +103,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Adult Social Services
+              Adult social services
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['adult-social-services'] | capitalize}}
@@ -114,7 +114,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Sundry debts / Miscellaneous Income
+              Sundry debts or miscellaneous income
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['sundry-debts'] | capitalize}}
@@ -137,7 +137,7 @@
           {% if data['blue-badge'] == 'yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Blue Badge reference number
+              Blue Badge reference number (optional)
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['blue-badge-number']  | upper}}
@@ -149,7 +149,7 @@
           {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Concessionary Travel
+              Concessionary travel
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['concessionary-travel']  | capitalize}}
@@ -160,7 +160,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Passport
+              UK Passport
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['passport']  | capitalize}}
@@ -183,7 +183,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Passport number
+              Passport number of the person who died
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['passport-number'] | upper}}
@@ -195,7 +195,7 @@
           {% if data['passport-number-2'] %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Second passport number
+              Second passport number (optional)
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['passport-number-2'] | capitalize}}
@@ -208,7 +208,7 @@
           {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Driving licence
+              UK driving licence
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['driving-licence']  | capitalize}}
@@ -220,7 +220,7 @@
           {% if data['driving-licence'] == 'yes' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Driving licence number
+              Driving licence number of the person who died
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['driving-licence-number']   | upper}}
@@ -308,7 +308,7 @@
           {% endif %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Armed Forces Pension Schemes
+              Armed forces pension schemes
             </dt>
             <dd class="govuk-summary-list__value">
               {{data['armed-forces-pension-scheme'] | capitalize}}
@@ -343,7 +343,7 @@
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               {% if data['ni-number'] != "QQ123456C" and data['ni-number'] != "QQ112233C" %}
-              Public sector pension providers you want to notify about the death
+              Notify public sector pension providers
               {% elif data['ni-number'] == "QQ123456C" %}
               Public sector pensions
               {% else %}

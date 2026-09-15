@@ -4,42 +4,44 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <form class="form" action="check-your-answers-2" method="post">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/{{data.version}}/select-local-council" method="post">
     <h1 class="govuk-heading-l">{{pageName}}</h1>
-    <h2 class="govuk-heading-m">
-      Which council was providing most services to the person who died?
-    </h2>
 
-    <div id="council-question-hint" class="govuk-hint">
-      For example, council housing, library services, Blue Badge, or paying Council Tax.
-    </div>
+    <p class="govuk-body">If the person who died used a council's services, you can notify that council about the death. For example, to update their Council Tax, housing or social services records.</p>
 
-    <div class="govuk-form-group govuk-!-margin-top-4">
-      <label class="govuk-label" for="local-council">
-        Select council
-      </label>
+<p class="govuk-body">Tell Us Once can only notify one council.  If the person who died used services from more than once council, notify the one that provided the most services.</p>
 
-      <div id="local-council-hint" class="govuk-hint">
-        If they lived in an area with more than one council, you need to select the borough or district council from the list. We can then work out which council to notify too
+<p class="govuk-body">Based on their address, the council that may have provided most council services to the person who died is:</p>
+
+<div class="govuk-inset-text">Herefordshire Council</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      Do you want to notify Herefordshire Council about the death?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="local-council-select" name="local-council-select" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="local-council-select">
+          Yes
+        </label>
       </div>
-
-      <div class="govuk-!-width-two-thirds">
-        <div id="autocomplete-container"></div>
-
-        <select
-          class="govuk-select govuk-visually-hidden"
-          id="autocomplete"
-          name="local-council"
-          aria-describedby="local-council-hint">
-          {% include "includes/registration-authorities.html" %}
-        </select>
+      <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="local-council-select-2" name="local-council-select" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="local-council-select-2">
+          No, I want to select a different council
+        </label>
       </div>
     </div>
+  </fieldset>
+</div>
 
     <!-- If you want to tell more than one council -->
 
-    <details class="govuk-details govuk-!-padding-bottom-6">
+    <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           If you want to tell more than one council

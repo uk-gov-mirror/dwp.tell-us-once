@@ -1,34 +1,73 @@
-{% extends "layouts/main.html" %}
-{% set pageName="Before you submit the information" %}
-{% set backLink = true %}
-
-{% block content %}
+{% extends "layouts/main.html" %} {% set pageName="Before you send the information"
+%} {% set backLink = true %} {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-l">{{pageName}}</h1>
 
-    <p class="govuk-body">We’ll ask if you want:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>an email confirmation</li>
-      <li>any future communication to be in Welsh</li>
-    </ul>
+    <div id="toggle-user-location-wales" hidden>
+      <p class="govuk-body">We’ll ask if you want:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email confirmation</li>
+        <li>any future communication to be in Welsh</li>
+      </ul>
 
-    <p class="govuk-body">You’ll also have the opportunity to check all your answers again.</p>
-    
+      <p class="govuk-body">You can also check all your answers again.</p>
+    </div>
+
+    <div id="toggle-user-location-england">
+      <p class="govuk-body">We’ll ask if you want an email confirmation.</p>
+
+      <p class="govuk-body">You can also check all your answers again.</p>
+    </div>
+
     <!---------Button-------->
 
-    {{ govukButton({
-    text: "Continue",
-    href: 'email-confirmation'
-    }) }}
+    {{ govukButton({ text: "Continue", href: 'email-confirmation' }) }}
 
     <!---------If any of these details are wrong-------->
-
   </div>
 </div>
 
-
 {% include "includes/contact.njk" %}
+
+<div class="govuk-grid-row govuk-!-margin-top-9">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- This section is for controlling the prototype - not for prod -->
+    <div class="prototype-options">
+      <div class="prototype-options-header-container">
+        <h3 class="govuk-heading-s prototype-options-header">
+          Prototype options
+        </h3>
+      </div>
+      <div class="prototype-options-content">
+        <ul class="govuk-list govuk-!-margin-bottom-0">
+          <li>
+            <a href="#" id="toggle-user-location"
+              >Show this page for users in Wales</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End -->
+  </div>
+</div>
+
+<script>
+  const toggleLink = document.getElementById("toggle-user-location");
+  const walesContent = document.getElementById("toggle-user-location-wales");
+  const englandContent = document.getElementById(
+    "toggle-user-location-england",
+  );
+  let showingWales = false;
+  toggleLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    showingWales = !showingWales;
+    walesContent.hidden = !showingWales;
+    englandContent.hidden = showingWales;
+    this.textContent = showingWales
+      ? "Show content for users in England"
+      : "Show content for users in Wales";
+  });
+</script>
 
 {% endblock %}
